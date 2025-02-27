@@ -1,0 +1,269 @@
+{
+    "FIELDOPT INPUT BLOCK": {
+        "n": {
+            "DESCRIPTION": "number of wells",
+            "UNIT": "",
+            "VALUE": 4
+        },
+        "WellNo": {
+            "DESCRIPTION": "well index",
+            "UNIT": "",
+            "VALUE": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "PCM": {
+            "DESCRIPTION": "target location, i.e., the 1st point of completion interval. 3D, [EAST,NORTH,Depth]",
+            "UNIT": "m",
+            "VALUE": [
+                [
+                    517167.9,
+                    6782513.9,
+                    -1550.0
+                ],
+                [
+                    518255.3,
+                    6784864.0,
+                    -1559.0
+                ],
+                [
+                    516179.0,
+                    6782799.0,
+                    -1557.0
+                ],
+                [
+                    515726.0,
+                    6784079.0,
+                    -1577.0
+                ]
+            ]
+        },
+        "VCM": {
+            "DESCRIPTION": "driling direction at the target, 3D, [EAST,NORTH,Depth]",
+            "UNIT": "m",
+            "VALUE": [
+                [
+                    968.2,
+                    636.1,
+                    -14.0
+                ],
+                [
+                    -851.2999999999884,
+                    692.0,
+                    -1.0
+                ],
+                [
+                    258.0,
+                    1055.0,
+                    -23.0
+                ],
+                [
+                    541.0,
+                    1051.0,
+                    -4.0
+                ]
+            ]
+        },
+        "PKzM": {
+            "DESCRIPTION": "kickoff depth, [Depth]",
+            "UNIT": "m",
+            "VALUE": [
+                [
+                    -400.0
+                ],
+                [
+                    -400.0
+                ],
+                [
+                    -400.0
+                ],
+                [
+                    -400.0
+                ]
+            ]
+        },
+        "VKM": {
+            "DESCRIPTION": "driling direction at the KOP, 3D, [EAST,NORTH,Depth]",
+            "UNIT": "m",
+            "VALUE": [
+                [
+                    0.0,
+                    0.0,
+                    -1.0
+                ],
+                [
+                    0.0,
+                    0.0,
+                    -1.0
+                ],
+                [
+                    0.0,
+                    0.0,
+                    -1.0
+                ],
+                [
+                    0.0,
+                    0.0,
+                    -1.0
+                ]
+            ]
+        },
+        "DLSM": {
+            "DESCRIPTION": "dogleg severity, [Depth]",
+            "UNIT": "deg/30m",
+            "VALUE": [
+                [
+                    3.0
+                ],
+                [
+                    3.0
+                ],
+                [
+                    3.0
+                ],
+                [
+                    3.0
+                ]
+            ]
+        },
+        "rM": {
+            "DESCRIPTION": "turning radius",
+            "UNIT": "m",
+            "VALUE": [
+                [
+                    572.9577951308232
+                ],
+                [
+                    572.9577951308232
+                ],
+                [
+                    572.9577951308232
+                ],
+                [
+                    572.9577951308232
+                ]
+            ]
+        },
+        "MD_intervalM": {
+            "DESCRIPTION": "measured depth interval in output data of well trajectory",
+            "UNIT": "m",
+            "VALUE": [
+                [
+                    30.0
+                ],
+                [
+                    100.0
+                ],
+                [NaN
+                ],
+                [NaN
+                ]
+            ]
+        },
+        "XRange": {
+            "DESCRIPTION": "X(East) range for computing",
+            "UNIT": "m",
+            "VALUE": [
+                515000.0,
+                520000.0
+            ]
+        },
+        "YRange": {
+            "DESCRIPTION": "Y(North) range for computing",
+            "UNIT": "m",
+            "VALUE": [
+                6781000.0,
+                6786000.0
+            ]
+        },
+        "resolution": {
+            "DESCRIPTION": "resolution for computing nodes",
+            "UNIT": "m",
+            "VALUE": 200.0
+        },
+        "cst_radiusM": {
+            "DESCRIPTION": "radius for computing cost contour",
+            "UNIT": "m",
+            "VALUE": [
+                [
+                    3000.0
+                ],
+                [
+                    3000.0
+                ],
+                [
+                    3000.0
+                ],
+                [
+                    3000.0
+                ]
+            ]
+        },
+        "PKM": {
+            "DESCRIPTION": "kickoff point, [East, North, Depth]",
+            "UNIT": "m",
+            "VALUE": [
+                [NaN, NaN,
+                    -400.0
+                ],
+                [NaN, NaN,
+                    -400.0
+                ],
+                [NaN, NaN,
+                    -400.0
+                ],
+                [NaN, NaN,
+                    -400.0
+                ]
+            ]
+        },
+        "necon": {
+            "DESCRIPTION": "non-equal constraints",
+            "UNIT": "",
+            "VALUE": null
+        },
+        "lay_con": {
+            "DESCRIPTION": "formation constraints in special layer(s)",
+            "UNIT": "",
+            "VALUE": null
+        },
+        "cst_Site": {
+            "DESCRIPTION": "drill site preparation cost",
+            "UNIT": "",
+            "VALUE": 300.0
+        },
+        "slot": {
+            "DESCRIPTION": "available slot numbers in one cluster",
+            "UNIT": "",
+            "VALUE": [
+                4,
+                3,
+                2,
+                1
+            ]
+        },
+        "cst_WH": {
+            "DESCRIPTION": "cost of subsea wellhead equipment of different slots, corresponding with slot",
+            "UNIT": "",
+            "VALUE": [
+                50.0,
+                50.0,
+                30.0,
+                20.0
+            ]
+        },
+        "cluster_min": {
+            "DESCRIPTION": "minimum number of clusters(drill sites)",
+            "UNIT": "",
+            "VALUE": 10.0
+        },
+        "cluster_max": {
+            "DESCRIPTION": "maximum number of clusters(drill sites)",
+            "UNIT": "",
+            "VALUE": 10.0
+        }
+    }
+}
