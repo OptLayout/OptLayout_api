@@ -7,16 +7,18 @@ import sys
 import numpy as np
 from typing import Any, Dict, List, Union
 
-from AsiteNwells.IO.solu2json import solu2json
-from AsiteNwells.IO.solu2json import soluList2json
-
 # 添加项目根目录到系统路径
 current_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-sys.path.append(current_dir)
+if current_dir not in sys.path:
+    sys.path.append(current_dir)
 
 # 添加PYD文件所在目录到Python路径
 pyd_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'build', 'lib.win-amd64-cpython-311'))
-sys.path.append(pyd_path)
+if pyd_path not in sys.path:
+    sys.path.insert(0, pyd_path)
+
+from AsiteNwells.IO.solu2json import solu2json
+from AsiteNwells.IO.solu2json import soluList2json
 
 from .models import FieldOptInput
 from CLS_OptField import OptField, NumpyEncoder
