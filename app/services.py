@@ -14,6 +14,10 @@ from AsiteNwells.IO.solu2json import soluList2json
 current_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(current_dir)
 
+# 添加PYD文件所在目录到Python路径
+pyd_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'build', 'lib.win-amd64-cpython-311'))
+sys.path.append(pyd_path)
+
 from .models import FieldOptInput
 from CLS_OptField import OptField, NumpyEncoder
 
