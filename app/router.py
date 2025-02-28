@@ -21,7 +21,7 @@ async def optimize_field_layout(input_data: FieldOptInput):
             status_code=400,
             detail={
                 "status": "error",
-                "message": f"请求处理错误: {str(e)}",
+                "message": f"error: {str(e)}",
                 "error_type": type(e).__name__
             }
         )
@@ -29,7 +29,7 @@ async def optimize_field_layout(input_data: FieldOptInput):
 @router.get("/")
 async def root():
     """
-    API根路径
+    API root
     """
-    return {"message": "欢迎使用OptLayout API服务"}
+    return {"message": "welcome to OptLayout API"}
 # @cursor end
