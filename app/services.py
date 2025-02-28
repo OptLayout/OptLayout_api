@@ -138,7 +138,7 @@ def process_field_optimization(input_data: dict):
         except Exception as e:
             return {
                 "status": "error",
-                "message": f"优化计算错误: {str(e)}"
+                "message": f"Optimization calculation error: {str(e)}"
             }
         finally:
             # 清理临时文件
@@ -147,6 +147,6 @@ def process_field_optimization(input_data: dict):
     except Exception as e:
         return {
             "status": "error",
-            "message": f"服务器错误: {str(e)}"
+            "message": f"Server error: {str(e)}"
         }
 # @cursor end
