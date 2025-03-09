@@ -7,16 +7,29 @@ import sys
 import numpy as np
 from typing import Any, Dict, List, Union
 import math
+import platform
 
 # 添加项目根目录到系统路径
 current_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if current_dir not in sys.path:
     sys.path.append(current_dir)
 
-# 添加PYD文件所在目录到Python路径
-pyd_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'build', 'lib.win-amd64-cpython-311'))
-if pyd_path not in sys.path:
-    sys.path.insert(0, pyd_path)
+# 根据操作系统确定正确的构建目录
+if platform.system() == 'Windows':
+    lib_dir = 'lib.win-amd64-cpython-311'
+else:
+    lib_dir = 'lib.linux-x86_64-3.11'  # Linux 环境下的目录名
+
+# 添加构建目录到Python路径
+build_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'build'))
+lib_path = os.path.abspath(os.path.join(build_path, lib_dir))
+if os.path.exists(lib_path) and lib_path not in sys.path:
+    sys.path.insert(0, lib_path)
+
+# 添加 AsiteNwells 模块所在目录
+asite_path = os.path.join(lib_path, 'AsiteNwells')
+if os.path.exists(asite_path) and asite_path not in sys.path:
+    sys.path.insert(0, asite_path)
 
 from AsiteNwells.IO.solu2json import solu2json
 from AsiteNwells.IO.solu2json import soluList2json
